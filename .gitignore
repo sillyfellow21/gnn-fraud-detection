@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environment
+.venv/
+
+# Local runtime/install artifacts
+vc_redist.x64.exe
+vc_redist_install.log
+
+# Large dataset artifacts (download locally when running)
+data/raw/
+data/processed/
+
+# Temporary validation logs
+outputs/recheck_cmd*.log
