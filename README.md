@@ -117,6 +117,13 @@ What I conclude today:
 - The project is complete as a rigorous comparison framework.
 - My next step is targeted GNN improvement before claiming graph superiority.
 
+### Current Conclusion (Transparent Status, Apr 2026)
+
+- This repository is complete as an end-to-end, reproducible fraud-ML benchmark.
+- On the current temporal split and settings, XGBoost is the stronger model.
+- GraphSAGE remains useful in this project for graph-native explainability and as
+	a structured baseline for future GNN improvements.
+
 ## Data Source Trail
 
 I downloaded the CSV files in this workspace through PyTorch Geometric's
@@ -144,8 +151,11 @@ Local location where I stored the files after download:
 ## Setup
 
 ```bash
-pip install torch torch-geometric pandas numpy scikit-learn matplotlib networkx xgboost
+pip install -r requirements.txt
 ```
+
+Environment note:
+- `requirements.txt` pins the package versions used in this workspace run.
 
 ## Run Modes
 
@@ -182,6 +192,28 @@ python elliptic_gnn_fraud_detection.py --data-dir data/raw --output-dir outputs 
 # More detailed training logs
 python elliptic_gnn_fraud_detection.py --data-dir data/raw --output-dir outputs --verbose
 ```
+
+## Quick Verification
+
+Use this command for a fast end-to-end smoke check:
+
+```bash
+python elliptic_gnn_fraud_detection.py --data-dir data/raw --output-dir outputs --epochs 3 --hidden-dim 64 --num-layers 2 --explainer-epochs 20
+```
+
+Expected terminal markers:
+- `[gnn val] ...`
+- `[gnn test] ...`
+- `[xgb val] ...`
+- `[xgb test] ...`
+- `[compare] test metrics (same split)`
+- `[done] run complete`
+
+Expected artifact refresh in `outputs/`:
+- `test_pr_curve_comparison.png`
+- `test_confusion_matrix_comparison.png`
+- `test_calibration_comparison.png`
+- `gnnexplainer_tp_subgraph.png`
 
 ## Pipeline Walkthrough
 
