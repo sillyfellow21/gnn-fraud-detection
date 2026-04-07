@@ -212,6 +212,25 @@ Additional result visualization PNGs:
 - `outputs/test_calibration_comparison.png`
 - `outputs/test_timestep_pr_auc_trend.png`
 
+## Visual Gallery
+
+### Explainability
+
+![GNNExplainer subgraph](outputs/gnnexplainer_tp_subgraph.png)
+
+### Model Comparison
+
+![PR curve comparison](outputs/test_pr_curve_comparison.png)
+![Confusion matrix comparison](outputs/test_confusion_matrix_comparison.png)
+![Calibration comparison](outputs/test_calibration_comparison.png)
+
+### Distribution and Temporal Views
+
+![Class mix overview](outputs/class_mix_overview.png)
+![Score distribution comparison](outputs/test_score_distribution_comparison.png)
+![Temporal risk trend](outputs/test_temporal_risk_trend.png)
+![Per-timestep PR-AUC trend](outputs/test_timestep_pr_auc_trend.png)
+
 How to interpret these outputs:
 - In the PNG, the gold node is the flagged transaction being explained.
 - Red nodes are known illicit, blue nodes are known licit, and gray nodes are
