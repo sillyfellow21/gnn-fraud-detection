@@ -37,14 +37,10 @@ ship explanation artifacts that analysts can actually review.
 	it delivers reproducible benchmarking, threshold-aware risk scoring, and
 	explainability artifacts that help Trust and Safety teams prioritize review.
 
-Quick meme energy (still true):
-- "No temporal leakage? We are not time-traveling labels in this house."
-- "GNN: let me cook on neighborhood context."
-- "XGBoost on this split: still the final boss right now."
 
-## Soft Overview | Non-Technical
+## Soft Overview 
 
-If you are not technical, this project can be read as a fraud risk triage
+This project can be read as a fraud risk triage
 system for Bitcoin transactions.
 
 What I built in plain English:
